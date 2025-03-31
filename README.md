@@ -2,6 +2,8 @@
 
 Diffly is a modern web application that allows users to compare two text snippets and visualize the differences between them. Built with Next.js and styled with Tailwind CSS, this tool provides an intuitive interface for identifying insertions, deletions, and unchanged text.
 
+![Diffly Screenshot](public/diffly_screenshot.png)
+
 ## Features
 
 - **Text Comparison**: Compare two text snippets and see the differences highlighted
