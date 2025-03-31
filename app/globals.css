@@ -1,26 +1,137 @@
 @import "tailwindcss";
 
 :root {
+  /* Base colors for light mode */
   --background: #ffffff;
   --foreground: #171717;
+  --surface: #f8f9fa;
+  --border: #e2e8f0;
+  --primary: #3b82f6;
+  --primary-hover: #2563eb;
+  --success: #10b981;
+  --danger: #ef4444;
+  --text-muted: #64748b;
+  --font-mona-sans: "Mona Sans", sans-serif;
 }
 
+/* Define theme variables that will be used throughout the app */
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --color-surface: var(--surface);
+  --color-border: var(--border);
+  --color-primary: var(--primary);
+  --color-primary-hover: var(--primary-hover);
+  --color-success: var(--success);
+  --color-danger: var(--danger);
+  --color-text-muted: var(--text-muted);
+  --font-sans: var(--font-mona-sans);
+  --font-mono: monospace;
 }
 
+/* Dark mode styles when .dark class is applied to html element */
+:root.dark {
+  --background: #0f172a;
+  --foreground: #f1f5f9;
+  --surface: #1e293b;
+  --border: #334155;
+  --primary: #3b82f6;
+  --primary-hover: #60a5fa;
+  --success: #10b981;
+  --danger: #f87171;
+  --text-muted: #94a3b8;
+}
+
+/* System preference dark mode - will be overridden by manual toggle */
 @media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+  :root:not(.light) {
+    --background: #0f172a;
+    --foreground: #f1f5f9;
+    --surface: #1e293b;
+    --border: #334155;
+    --primary: #3b82f6;
+    --primary-hover: #60a5fa;
+    --success: #10b981;
+    --danger: #f87171;
+    --text-muted: #94a3b8;
   }
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-sans);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+
+/* Add animation for color transitions */
+.animate-fade-in {
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+/* Custom utility classes for the app */
+.bg-surface {
+  background-color: var(--surface);
+}
+
+.border-color {
+  border-color: var(--border);
+}
+
+.text-muted {
+  color: var(--text-muted);
+}
+
+.btn-primary {
+  background-color: var(--primary);
+  color: white;
+}
+
+.btn-primary:hover:not(:disabled) {
+  background-color: var(--primary-hover);
+}
+
+/* Diff colors with improved contrast */
+.diff-insert {
+  background-color: rgba(16, 185, 129, 0.2);
+  color: var(--success);
+}
+
+.diff-delete {
+  background-color: rgba(239, 68, 68, 0.2);
+  color: var(--danger);
+  text-decoration: line-through;
+}
+
+/* Improve dark mode diff colors for better contrast */
+.dark .diff-insert {
+  background-color: rgba(16, 185, 129, 0.15);
+  color: #34d399;
+}
+
+.dark .diff-delete {
+  background-color: rgba(239, 68, 68, 0.15);
+  color: #f87171;
+}
+
+/* Add a subtle glow to the button in dark mode */
+.dark button:focus {
+  box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.5);
+}
+
+/* Improve text input styling in dark mode */
+.dark textarea {
+  background-color: rgba(30, 41, 59, 0.8);
+  border-color: #334155;
+}
+
+.dark textarea:focus {
+  border-color: #60a5fa;
+  box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.25);
 }
