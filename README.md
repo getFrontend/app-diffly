@@ -16,10 +16,8 @@ Diffly is a modern web application that allows users to compare two text snippet
 ## Technology Stack
 
 - **Frontend**: Next.js 15, React 19
-- **Styling**: Tailwind CSS 4
-- **Typography**: Mona Sans font
+- **Styling**: Tailwind CSS
 - **Diff Algorithm**: diff-match-patch library
-- **Icons**: React Icons
 
 ## Usage
 
