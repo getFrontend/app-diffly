@@ -12,7 +12,7 @@ export default function Header({ isDarkMode, onToggleDarkMode }: HeaderProps) {
   return (
     <header className="container mx-auto flex justify-between items-center p-4 border-b border-color">
       <h1 className="text-xl font-semibold text-foreground">
-        TextDiff - Comparison Tool
+        Diffly - your simple Comparison Tool
       </h1>
       <button
         onClick={onToggleDarkMode}

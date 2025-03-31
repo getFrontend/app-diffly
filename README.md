@@ -1,6 +1,6 @@
-# TextDiff - Text Comparison Tool
+# Diffly - Text Comparison Tool
 
-TextDiff is a modern web application that allows users to compare two text snippets and visualize the differences between them. Built with Next.js and styled with Tailwind CSS, this tool provides an intuitive interface for identifying insertions, deletions, and unchanged text.
+Diffly is a modern web application that allows users to compare two text snippets and visualize the differences between them. Built with Next.js and styled with Tailwind CSS, this tool provides an intuitive interface for identifying insertions, deletions, and unchanged text.
 
 ## Features
 

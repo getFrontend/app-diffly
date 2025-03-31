@@ -8,7 +8,7 @@ export default function Footer() {
   return (
     <footer className="container mx-auto flex justify-between items-center p-4 text-xs text-muted">
        <p>
-        © {currentYear} - TextDiff App by Sergey
+        © {currentYear} - Diffly App by Sergey
       </p>
       
 

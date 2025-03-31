@@ -8,8 +8,8 @@ const monaSans = Mona_Sans({
 });
 
 export const metadata: Metadata = {
-  title: "TextDiff - Comparison Tool",
-  description: "TextDiff is a modern web application that allows users to compare two text snippets and visualize the differences between them.",
+  title: "Diffly - simple comparison Tool",
+  description: "Diffly is a modern web application that allows users to compare two text snippets and visualize the differences between them.",
 };
 
 export default function RootLayout({

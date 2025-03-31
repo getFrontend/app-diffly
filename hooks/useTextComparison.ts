@@ -53,7 +53,7 @@ export function useTextComparison() {
       <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>TextDiff Comparison Result</title>
+        <title>Diffly Comparison Result</title>
         <style>
           :root {
             --background: #ffffff;
@@ -120,7 +120,7 @@ export function useTextComparison() {
     const url = URL.createObjectURL(blob);
     const a = document.createElement('a');
     a.href = url;
-    a.download = 'textdiff_comparison.html';
+    a.download = 'diffly_comparison.html';
     document.body.appendChild(a);
     a.click();
     document.body.removeChild(a);
