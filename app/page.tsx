@@ -3,7 +3,7 @@
 import React from 'react';
 import Header from '@/components/Header';
 import DiffResult from '@/components/DiffResult';
-import TextInputArea from '@/components/TextInputArea';
+import TextInputWithCounter from '@/components/TextInputWithCounter';
 import ActionButtons from '@/components/ActionButtons';
 import Footer from '@/components/Footer';
 import { useDarkMode } from '@/hooks/useDarkMode';
@@ -27,15 +27,15 @@ export default function HomePage() {
       <Header isDarkMode={isDarkMode} onToggleDarkMode={toggleDarkMode} />
 
       <main className="flex-grow container mx-auto p-4 md:p-6 lg:p-8">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
-          <TextInputArea
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <TextInputWithCounter
             id="textA"
             label="Text A"
             value={textA}
             onChange={setTextA}
             placeholder="Enter text A here..."
           />
-          <TextInputArea
+          <TextInputWithCounter
             id="textB"
             label="Text B"
             value={textB}
